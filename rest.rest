@@ -1,0 +1,168 @@
+# post words
+POST http://localhost:8080/words HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+&sentenceId=1
+&pos="pos 1"
+&word="word 1"
+
+###
+
+# get words
+
+GET http://localhost:8080/words HTTP/1.1
+
+
+###
+
+# get words by id
+
+GET http://localhost:8080/words/1 HTTP/1.1
+
+###
+
+# get words by sentence id
+GET http://localhost:8080/words/sentence/1 HTTP/1.1
+
+###
+
+# update words by id
+
+PUT http://localhost:8080/words/1 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+&sentenceId=1
+&pos="pos 1"
+&word="word 1 update"
+
+###
+
+# delete words by id
+
+DELETE http://localhost:8080/words/1 HTTP/1.1
+
+###
+
+# create new sentence
+
+POST http://localhost:8080/sentences HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+&fileId=1
+&sentence="sentence 1"
+&posSentence="pos sentence 1"
+&pos="pos 1"
+
+###
+
+# get sentences
+
+GET http://localhost:8080/sentences HTTP/1.1
+
+###
+
+# get sentences by id
+
+GET http://localhost:8080/sentences/1 HTTP/1.1
+
+###
+
+# get sentences by file id
+
+GET http://localhost:8080/sentences/file/1 HTTP/1.1
+
+###
+
+# update sentences by id
+
+PUT http://localhost:8080/sentences/1 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+&fileId=1
+&sentence="sentence 1 update"
+&posSentence="pos sentence 1 update"
+&pos="pos 1 update"
+
+###
+
+# create word
+
+POST http://localhost:8080/files HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+&categoriId=1
+&fileName="file 1"
+&content="content 1"
+
+###
+
+# get files
+
+GET http://localhost:8080/files HTTP/1.1
+
+###
+
+# get files by id
+
+GET http://localhost:8080/files/1 HTTP/1.1
+
+###
+
+# get files by categori id
+
+GET http://localhost:8080/files/categori/1 HTTP/1.1
+
+###
+
+# update files by id
+
+PUT http://localhost:8080/files/1 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+&categoriId=1
+&fileName="file 1 update"
+&content="content 1 update"
+
+###
+
+# delete files by id
+
+DELETE http://localhost:8080/files/1 HTTP/1.1
+
+###
+
+# create categori
+
+POST http://localhost:8080/category HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+&categoryName="categori 1"
+
+###
+
+# get category
+
+GET http://localhost:8080/category HTTP/1.1
+
+###
+
+# get category by id
+
+GET http://localhost:8080/category/1 HTTP/1.1
+
+###
+
+# update category by id
+
+PUT http://localhost:8080/category/1 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+&categoryName="categori 1 update"
+
+###
+
+# delete category by id
+
+DELETE http://localhost:8080/category/1 HTTP/1.1
+
+###
